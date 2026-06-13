@@ -1,0 +1,301 @@
+/* ========================================
+   Tamawatchu - Animations & Keyframes
+   ======================================== */
+
+/* Pet Idle Pulse */
+@keyframes petPulse {
+    0%, 100% {
+        transform: rotate(-15deg) scale(1);
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.02);
+    }
+}
+
+/* Clock Urgency Shake */
+@keyframes clockShake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-4px, -4px);
+    }
+    50% {
+        transform: translate(4px, 4px);
+    }
+    75% {
+        transform: translate(-4px, 4px);
+    }
+}
+
+/* Clock Hand Spin - Minute Hand */
+@keyframes clockHandSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Health Bar Blink */
+@keyframes healthBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Particle Fall (Confetti) */
+@keyframes particleFall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200px) translateX(var(--tx)) rotate(360deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Particle Rotation Variant */
+@keyframes particleRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toast/Notification Slide In */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Toast Slide Out */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Totem Revival Shield Effect */
+@keyframes shieldPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 182, 193, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 182, 193, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 182, 193, 0);
+    }
+}
+
+/* Capsule Pop */
+@keyframes capsulePop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Token Gain Sparkle */
+@keyframes tokenSparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2) translateY(-10px);
+    }
+}
+
+/* Claw Machine Animations */
+@keyframes clawGrab {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(120px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(120px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes fingerCloseLeft {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-35deg);
+    }
+}
+
+@keyframes fingerCloseRight {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes dispenserDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Claw Machine Face Expressions
+   ======================================== */
+
+/* Eye animations */
+@keyframes eyeOpenWide {
+    0% {
+        cy: 40%;
+        r: 8px;
+    }
+    100% {
+        cy: 35%;
+        r: 12px;
+    }
+}
+
+@keyframes eyeNormal {
+    0% {
+        cy: 35%;
+        r: 12px;
+    }
+    100% {
+        cy: 40%;
+        r: 8px;
+    }
+}
+
+@keyframes eyeBlink {
+    0%, 100% {
+        ry: 8px;
+        rx: 8px;
+    }
+    50% {
+        ry: 2px;
+        rx: 8px;
+    }
+}
+
+/* Mouth animations */
+@keyframes mouthSmile {
+    0% {
+        d: path('M 35 55 Q 50 65 65 55');
+    }
+    100% {
+        d: path('M 35 55 Q 50 70 65 55');
+    }
+}
+
+@keyframes mouthNeutral {
+    0% {
+        stroke-width: 1px;
+    }
+    100% {
+        stroke-width: 2px;
+    }
+}
+
+@keyframes mouthO {
+    0% {
+        d: path('M 50 55 A 5 8 0 1 0 50 71');
+    }
+    100% {
+        d: path('M 50 55 A 8 12 0 1 0 50 79');
+    }
+}
+
+/* Cheek animations */
+@keyframes cheekAppear {
+    0% {
+        opacity: 0;
+        r: 3px;
+    }
+    100% {
+        opacity: 0.5;
+        r: 6px;
+    }
+}
+
+@keyframes cheekGlow {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Modal animations */
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Effect timer pulse */
+@keyframes effectPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Revive shield burst */
+@keyframes shieldBurst {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

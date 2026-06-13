@@ -1,0 +1,248 @@
+/* ========================================
+   Tamawatchu - Responsive Design
+   ======================================== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .header-right {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .game-area {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pet-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .pet-container {
+        grid-column: 1 / -1;
+        min-height: 200px;
+    }
+
+    .pet-blob {
+        width: 100px;
+        height: 100px;
+    }
+
+    .health-section,
+    .clock-section {
+        min-width: 0;
+    }
+
+    .clock-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .content-section {
+        max-height: none;
+        padding-right: 0;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 14px;
+        --font-size-small: 12px;
+        --font-size-large: 18px;
+        --font-size-title: 24px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        gap: 10px;
+    }
+
+    .token-display {
+        font-size: var(--font-size-large);
+        padding: 8px 12px;
+    }
+
+    .schedule-select {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: var(--font-size-title);
+    }
+
+    .pet-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .pet-container {
+        padding: 20px;
+        min-height: 180px;
+    }
+
+    .pet-blob {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .card h2 {
+        font-size: var(--font-size-large);
+        margin-bottom: 10px;
+    }
+
+    .add-task-form {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .input {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: var(--font-size-small);
+    }
+
+    .btn-large {
+        padding: 12px 20px;
+        font-size: var(--font-size-base);
+    }
+
+    .task-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .task-actions {
+        grid-column: 1 / -1;
+        justify-content: flex-end;
+    }
+
+    .star-selector {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .inventory {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 8px;
+    }
+
+    .inventory-item {
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .btn-small {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .health-section,
+    .clock-section {
+        padding: 12px;
+    }
+
+    .clock-container {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Very Small Phones (less than 360px) */
+@media (max-width: 360px) {
+    :root {
+        --font-size-base: 13px;
+        --font-size-small: 11px;
+    }
+
+    .pet-blob {
+        width: 70px;
+        height: 70px;
+    }
+
+    .health-bar-container {
+        height: 20px;
+    }
+
+    .clock-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .star-selector label {
+        font-size: 11px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .container {
+        padding: 10px;
+    }
+
+    .game-area {
+        gap: 15px;
+    }
+
+    .content-section {
+        max-height: calc(100vh - 120px);
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .pet-container {
+        min-height: 160px;
+    }
+
+    .pet-blob {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .particle-container {
+        display: none;
+    }
+
+    .schedule-select,
+    .btn {
+        border: 1px solid #000;
+    }
+}
